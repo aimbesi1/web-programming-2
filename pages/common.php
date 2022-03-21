@@ -73,6 +73,7 @@
 			case "Link":
 				echo "Excuuuuse me, Princess!!!";
 				break;
+			// Add the other 8 cases
 			default:
 				echo $key;
 		}
