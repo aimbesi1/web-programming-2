@@ -7,16 +7,15 @@
  /* Starts the session */
 	session_start();
 	include 'common.php';
-	$_SESSION['INDEX'] = 2;
+	$_SESSION['INDEX'] = 10;
 	
 	updateScores($_POST['choice']);
 	
 	$_SESSION['choices'] = array(
-	'A' => array(0, 10, 0, 10, 10, 0, 0, 0, 0, 0),
-	'B' => array(0, 0, 0, 10, 10, 0, 0, 0, 10, 0),
-	'C' => array(10, 0, 10, 0, 0, 0, 10, 0, 0, 10),
-	'D' => array(0, 10, 0, 0, 0, 0, 0, 0, 10, 0),
-	'E' => array(10, 0, 0, 0, 0, 10, 0, 0, 0, 0));
+	'A' => array(  5,  10,  10,  10,   5,   5,  10,  10,  10,   0),
+	'B' => array( 10,   0,   0,   0,  10,  10,   0,   0,   0,  10),
+	'C' => array(  0,   0,   0,   0,   0,   0,   0,   0,   0,   0)
+	);
 ?>
 
 <!doctype html>
@@ -31,24 +30,18 @@
 		checkQuizProgress($_SESSION['INDEX']);
 	?>
 	
-	<h1> What is your favorite video game genre? </h1>
-	<form action="./quiz3.php" method="post">
+	<h1> Real talk: Single-player?? Or multi player? </h1>
+	<form action="./quiz11.php" method="post">
 		<fieldset>
 			<legend>Choose</legend>
 			<label>
-				<input type="radio" value="A" name="choice"> RPG
+				<input type="radio" value="A" name="choice"> Single-player
 			</label>
 			<label>
-				<input type="radio" value="B" name="choice"> FPS
+				<input type="radio" value="B" name="choice"> Multi-player
 			</label>
 			<label>
-				<input type="radio" value="C" name="choice"> Platformer
-			</label>
-			<label>
-				<input type="radio" value="D" name="choice"> Action
-			</label>
-			<label>
-				<input type="radio" value="E" name="choice"> Other / Nerds Genre
+				<input type="radio" value="C" name="choice"> Other
 			</label><br>
 			
 			<input type="submit" value="Submit"> 

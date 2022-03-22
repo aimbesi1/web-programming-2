@@ -7,16 +7,17 @@
  /* Starts the session */
 	session_start();
 	include 'common.php';
-	$_SESSION['INDEX'] = 2;
+	$_SESSION['INDEX'] = 4;
 	
 	updateScores($_POST['choice']);
 	
 	$_SESSION['choices'] = array(
-	'A' => array(0, 10, 0, 10, 10, 0, 0, 0, 0, 0),
-	'B' => array(0, 0, 0, 10, 10, 0, 0, 0, 10, 0),
-	'C' => array(10, 0, 10, 0, 0, 0, 10, 0, 0, 10),
-	'D' => array(0, 10, 0, 0, 0, 0, 0, 0, 10, 0),
-	'E' => array(10, 0, 0, 0, 0, 10, 0, 0, 0, 0));
+	'A' => array( 10,  10,   0,  10,   0,  10,   0,   0,   0,  10),
+	'B' => array(  0,  10,   0,   0,  10,  10,   0,   0,  10,   0),
+	'C' => array( 10,  10,   0,  10,   0,   0,   0,   0,   0,  10),
+	'D' => array(  0,   0,  10,   0,   0,  10,  10,  10,   0,   0),
+	'E' => array(  0,   0,   0,   0,  10,   0,  10,  10,   0,  10)
+	);
 ?>
 
 <!doctype html>
@@ -31,24 +32,24 @@
 		checkQuizProgress($_SESSION['INDEX']);
 	?>
 	
-	<h1> What is your favorite video game genre? </h1>
-	<form action="./quiz3.php" method="post">
+	<h1> Which ancient civilization would you most like to visit? </h1>
+	<form action="./quiz5.php" method="post">
 		<fieldset>
 			<legend>Choose</legend>
 			<label>
-				<input type="radio" value="A" name="choice"> RPG
+				<input type="radio" value="A" name="choice"> Egypt
 			</label>
 			<label>
-				<input type="radio" value="B" name="choice"> FPS
+				<input type="radio" value="B" name="choice"> Greece
 			</label>
 			<label>
-				<input type="radio" value="C" name="choice"> Platformer
+				<input type="radio" value="C" name="choice"> Japan
 			</label>
 			<label>
-				<input type="radio" value="D" name="choice"> Action
+				<input type="radio" value="D" name="choice"> Maya
 			</label>
 			<label>
-				<input type="radio" value="E" name="choice"> Other / Nerds Genre
+				<input type="radio" value="E" name="choice"> Native America
 			</label><br>
 			
 			<input type="submit" value="Submit"> 

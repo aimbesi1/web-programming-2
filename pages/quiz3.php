@@ -7,16 +7,17 @@
  /* Starts the session */
 	session_start();
 	include 'common.php';
-	$_SESSION['INDEX'] = 2;
+	$_SESSION['INDEX'] = 3;
 	
 	updateScores($_POST['choice']);
 	
 	$_SESSION['choices'] = array(
-	'A' => array(0, 10, 0, 10, 10, 0, 0, 0, 0, 0),
-	'B' => array(0, 0, 0, 10, 10, 0, 0, 0, 10, 0),
-	'C' => array(10, 0, 10, 0, 0, 0, 10, 0, 0, 10),
-	'D' => array(0, 10, 0, 0, 0, 0, 0, 0, 10, 0),
-	'E' => array(10, 0, 0, 0, 0, 10, 0, 0, 0, 0));
+	'A' => array( 10,  10,  10,   0,  10,   0,  10,   0,  10,  10),
+	'B' => array(-10,  10,   0,   0,   0,   0,  10,   0,   0,   0),
+	'C' => array( 10,  10,   0,  10,  10, -10,   0,   0,   0,   0),
+	'D' => array(  0,  10,  10,   0,  10,  10,   0,  10,   0,   0),
+	'E' => array(  0,  10,   0,   0,   0,   0,   0,  10,   0,  10)
+	);
 ?>
 
 <!doctype html>
@@ -31,24 +32,24 @@
 		checkQuizProgress($_SESSION['INDEX']);
 	?>
 	
-	<h1> What is your favorite video game genre? </h1>
-	<form action="./quiz3.php" method="post">
+	<h1> What is your favorite color? </h1>
+	<form action="./quiz4.php" method="post">
 		<fieldset>
 			<legend>Choose</legend>
 			<label>
-				<input type="radio" value="A" name="choice"> RPG
+				<input type="radio" value="A" name="choice"> Red
 			</label>
 			<label>
-				<input type="radio" value="B" name="choice"> FPS
+				<input type="radio" value="B" name="choice"> Yellow
 			</label>
 			<label>
-				<input type="radio" value="C" name="choice"> Platformer
+				<input type="radio" value="C" name="choice"> Green
 			</label>
 			<label>
-				<input type="radio" value="D" name="choice"> Action
+				<input type="radio" value="D" name="choice"> Blue
 			</label>
 			<label>
-				<input type="radio" value="E" name="choice"> Other / Nerds Genre
+				<input type="radio" value="E" name="choice"> Purple
 			</label><br>
 			
 			<input type="submit" value="Submit"> 
