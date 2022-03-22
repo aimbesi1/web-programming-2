@@ -73,10 +73,13 @@
 			case "Link":
 				echo "Excuuuuse me, Princess!!!";
 				break;
-			// Add the other 8 cases
 			default:
 				echo $key;
 		}
+	}
+	
+	function scoredLots($score) {
+		return $score >= 100;
 	}
 	
 	// Error function. Replaces the webpage with a different webpage.

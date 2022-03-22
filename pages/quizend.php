@@ -7,7 +7,7 @@
  /* Starts the session */
 	session_start();
 	include 'common.php';
-	$_SESSION['INDEX'] = 3;
+	$_SESSION['INDEX'] = 16;
 	
 	updateScores($_POST['choice']);
 
