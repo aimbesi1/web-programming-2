@@ -23,35 +23,38 @@
 <head>
 <meta charset="utf-8">
 <title>Personality Quiz</title>
-<!-- <link href="./css/style.css" rel="stylesheet"> -->
+<link href="./css/style.css" rel="stylesheet">
 </head>
 <body>
 	<?php 
 		checkQuizProgress($_SESSION['INDEX']);
+		insertHeader();
 	?>
 	
+	<div class="quiz">
 	<h1> What MMO class do you prefer? </h1>
 	<form action="./quiz15.php" method="post">
 		<fieldset>
 			<legend>Choose</legend>
 			<label>
 				<input type="radio" value="A" name="choice"> Tank
-			</label>
+			</label><br><br>
 			<label>
 				<input type="radio" value="B" name="choice"> Healer
-			</label>
+			</label><br><br>
 			<label>
 				<input type="radio" value="C" name="choice"> Damage
-			</label>
-			<br>
+			</label><br><br>
 			
 			<input type="submit" value="Submit"> 
 		</fieldset>
 	</form>
 	<p><a href="./index.php">Go to start</a></p>
+	</div>
 	
 	<?php
-		print_r($_SESSION);
+		// print_r($_SESSION);
+		insertFooter();
 	?>
 </body>
 </html>

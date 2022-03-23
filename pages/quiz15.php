@@ -25,40 +25,44 @@
 <head>
 <meta charset="utf-8">
 <title>Personality Quiz</title>
-<!-- <link href="./css/style.css" rel="stylesheet"> -->
+<link href="./css/style.css" rel="stylesheet">
 </head>
 <body>
 	<?php 
 		checkQuizProgress($_SESSION['INDEX']);
+		insertHeader();
 	?>
 	
+	<div class="quiz">
 	<h1> Last question! What is your favorite pet? </h1>
 	<form action="./quizend.php" method="post">
 		<fieldset>
 			<legend>Choose</legend>
 			<label>
 				<input type="radio" value="A" name="choice"> Cat
-			</label>
+			</label><br><br>
 			<label>
 				<input type="radio" value="B" name="choice"> Dog
-			</label>
+			</label><br><br>
 			<label>
 				<input type="radio" value="C" name="choice"> Rabbit
-			</label>
+			</label><br><br>
 			<label>
 				<input type="radio" value="D" name="choice"> Bird
-			</label>
+			</label><br><br>
 			<label>
 				<input type="radio" value="E" name="choice"> Fish
-			</label><br>
+			</label><br><br>
 			
 			<input type="submit" value="Submit"> 
 		</fieldset>
 	</form>
 	<p><a href="./index.php">Go to start</a></p>
+	</div>
 	
 	<?php
-		print_r($_SESSION);
+		// print_r($_SESSION);
+		insertFooter();
 	?>
 </body>
 </html>

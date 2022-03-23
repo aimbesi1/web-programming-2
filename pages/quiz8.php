@@ -25,40 +25,44 @@
 <head>
 <meta charset="utf-8">
 <title>Personality Quiz</title>
-<!-- <link href="./css/style.css" rel="stylesheet"> -->
+<link href="./css/style.css" rel="stylesheet">
 </head>
 <body>
 	<?php 
 		checkQuizProgress($_SESSION['INDEX']);
+		insertHeader();
 	?>
 	
+	<div class="quiz">
 	<h1> What is your favorite pastime? </h1>
 	<form action="./quiz9.php" method="post">
 		<fieldset>
 			<legend>Choose</legend>
 			<label>
 				<input type="radio" value="A" name="choice"> Reading and literature
-			</label>
+			</label><br><br>
 			<label>
 				<input type="radio" value="B" name="choice"> Art and fine arts
-			</label>
+			</label><br><br>
 			<label>
 				<input type="radio" value="C" name="choice"> Hanging out with friends
-			</label>
+			</label><br><br>
 			<label>
 				<input type="radio" value="D" name="choice"> Learning new skills
-			</label>
+			</label><br><br>
 			<label>
 				<input type="radio" value="E" name="choice"> ??? (secret)
-			</label><br>
+			</label><br><br>
 			
 			<input type="submit" value="Submit"> 
 		</fieldset>
 	</form>
 	<p><a href="./index.php">Go to start</a></p>
+	</div>
 	
 	<?php
-		print_r($_SESSION);
+		// print_r($_SESSION);
+		insertFooter();
 	?>
 </body>
 </html>

@@ -25,40 +25,44 @@
 <head>
 <meta charset="utf-8">
 <title>Personality Quiz</title>
-<!-- <link href="./css/style.css" rel="stylesheet"> -->
+<link href="./css/style.css" rel="stylesheet">
 </head>
 <body>
 	<?php 
 		checkQuizProgress($_SESSION['INDEX']);
+		insertHeader();
 	?>
 	
-	<h1> What is your favorite color? </h1>
+	<div class="quiz">
+	<h1> 3. What is your favorite color? </h1>
 	<form action="./quiz4.php" method="post">
 		<fieldset>
 			<legend>Choose</legend>
 			<label>
 				<input type="radio" value="A" name="choice"> Red
-			</label>
+			</label><br><br>
 			<label>
 				<input type="radio" value="B" name="choice"> Yellow
-			</label>
+			</label><br><br>
 			<label>
 				<input type="radio" value="C" name="choice"> Green
-			</label>
+			</label><br><br>
 			<label>
 				<input type="radio" value="D" name="choice"> Blue
-			</label>
+			</label><br><br>
 			<label>
 				<input type="radio" value="E" name="choice"> Purple
-			</label><br>
+			</label><br><br>
 			
 			<input type="submit" value="Submit"> 
 		</fieldset>
 	</form>
 	<p><a href="./index.php">Go to start</a></p>
+	</div>
 	
 	<?php
-		print_r($_SESSION);
+		// print_r($_SESSION);
+		insertFooter();
 	?>
 </body>
 </html>
