@@ -1,0 +1,25 @@
+body{
+	background-color:red;
+}
+img{
+	width:200px;
+	height:200px;
+}
+.translate{
+  animation: move 4s infinite;                
+} 
+ 
+@keyframes move{
+    0% {
+      transform: translateX(100px) rotateY(0deg);
+    }
+    49% {
+      transform: translateX(500px) rotateY(180deg);
+    }
+    50% {
+      transform: translateX(500px) rotateY(180deg);
+    }
+    100% {
+      transform: translateX(-1330px) rotateY(180deg);
+    }
+}
