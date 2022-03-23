@@ -13,8 +13,8 @@
 
 	
 	
-	print_r($_SESSION);
-	print_r($outcome_array);
+	// print_r($_SESSION);
+	// print_r($outcome_array);
 ?>
 
 <!doctype html>
@@ -22,20 +22,21 @@
 <head>
 <meta charset="utf-8">
 <title>Personality Quiz</title>
-<!-- <link href="./css/style.css" rel="stylesheet"> -->
+<link href="./css/style.css" rel="stylesheet">
 </head>
 <body>
 	<?php 
 		checkQuizProgress($_SESSION['INDEX']);
 	?>
 	
-	<h1> Welcome! </h1>
-	<h2> Your result: </h2>
+	<div class="quiz">
+	<h1> Your result: </h1>
 	<?php determineResult(); ?>
-	<p><a href="./index.php">Go to start</a></p>
+	<p><a href="./index.php">Start over?</a></p>
+	</div>
 	
 	<?php
-		print_r($_SESSION);
+		// print_r($_SESSION);
 	?>
 </body>
 </html>

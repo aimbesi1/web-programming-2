@@ -24,38 +24,41 @@
 <head>
 <meta charset="utf-8">
 <title>Personality Quiz</title>
-<!-- <link href="./css/style.css" rel="stylesheet"> -->
+<link href="./css/style.css" rel="stylesheet">
 </head>
 <body>
 	<?php 
 		checkQuizProgress($_SESSION['INDEX']);
+		insertHeader();
 	?>
 	
+	<div class="quiz">
 	<h1> What's most important to you? </h1>
 	<form action="./quiz6.php" method="post">
 		<fieldset>
 			<legend>Choose</legend>
 			<label>
 				<input type="radio" value="A" name="choice"> Being the best
-			</label>
+			</label><br><br>
 			<label>
 				<input type="radio" value="B" name="choice"> Your friends
-			</label>
+			</label><br><br>
 			<label>
 				<input type="radio" value="C" name="choice"> Your possessions
-			</label>
+			</label><br><br>
 			<label>
 				<input type="radio" value="D" name="choice"> Trying new things
-			</label>
-			<br>
+			</label><br><br>
 			
 			<input type="submit" value="Submit"> 
 		</fieldset>
 	</form>
 	<p><a href="./index.php">Go to start</a></p>
+	</div>
 	
 	<?php
-		print_r($_SESSION);
+		insertFooter();
+		// print_r($_SESSION);
 	?>
 </body>
 </html>

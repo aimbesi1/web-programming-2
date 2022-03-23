@@ -86,7 +86,19 @@
 	function tooBad() {
 		echo "Too bad! <br>";
 		echo '<p><a href="./index.php">Go to start</a></p>';
-		print_r($_SESSION);
+		// print_r($_SESSION);
 		exit;
+	}
+	
+	function insertHeader() {
+		echo '<div class="endimg">
+		<img src="./images/mario-run.gif" alt="Mario">
+		</div>';
+	}
+	
+	function insertFooter() {
+		echo '<div class="endimg">
+		<img src="./images/sonic-run.gif" alt="Sonic">
+		</div>';
 	}
 ?>
