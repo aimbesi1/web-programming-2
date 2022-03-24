@@ -7,14 +7,15 @@
  /* Starts the session */
 	session_start();
 	include 'common.php';
-	$_SESSION['INDEX'] = 16;
-	
-	updateScores($_POST['choice']);
+	initializeArrays();
+
+	if (isset($_GET['choice']))
+		updateScores($_GET['choice'], $_SESSION['INDEX'], $_SESSION['choices15']);
 
 	
 	
-	print_r($_SESSION);
-	print_r($outcome_array);
+	// print_r($_SESSION);
+	// print_r($outcome_array);
 ?>
 
 <!doctype html>
@@ -22,20 +23,22 @@
 <head>
 <meta charset="utf-8">
 <title>Personality Quiz</title>
-<!-- <link href="./css/style.css" rel="stylesheet"> -->
+<link href="./css/style.css" rel="stylesheet">
 </head>
 <body>
 	<?php 
-		checkQuizProgress($_SESSION['INDEX']);
+		// checkQuizProgress($_SESSION['INDEX']);
 	?>
 	
-	<h1> Welcome! </h1>
-	<h2> Your result: </h2>
+	<div class="result">
+	<h1> YOUR RESULT: </h1>
 	<?php determineResult(); ?>
-	<p><a href="./index.php">Go to start</a></p>
+	<p><a href="./index.php">Start over?</a></p>
+	</div>
 	
 	<?php
-		print_r($_SESSION);
+		// print_r($_SESSION['NAMES']);
+		// print_r($_SESSION['TOTAL']);
 	?>
 </body>
 </html>

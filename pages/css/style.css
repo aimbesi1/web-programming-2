@@ -1,0 +1,122 @@
+/* Begin CSS by: Minhad Mahmud */
+body{
+	background-color: white;
+	background-image: url("../images/game.png");
+	font-size: 14pt;
+	font-family: Verdana;
+	display:flex;
+	flex-flow: column;
+}
+img{
+	width:200px;
+	height:200px;
+}
+.translate {
+	animation: move 6s infinite;                
+} 
+ 
+@keyframes move{
+    0% {
+      transform: translateX(-100px) rotateY(0deg);
+    }
+    49% {
+      transform: translateX(500px) rotateY(180deg);
+    }
+    50% {
+      transform: translateX(500px) rotateY(180deg);
+    }
+    100% {
+      transform: translateX(-2000px) rotateY(180deg);
+    }
+}
+
+/* Begin CSS by: Tony Imbesi */
+
+div.quiz {
+	align-self: center;
+	background-color: #D2FFC2;
+	border: 6px solid #F8FFF6;
+	min-height: max-content;
+	width: 60%;
+	text-align: center;
+}
+
+div.result {
+	align-self: center;
+	position: relative;
+	top: 200px;
+	background-color: #D2FFC2;
+	min-height: max-content;
+	border: 6px solid black;
+	width: 60%;
+}
+
+div.result h1 {
+	margin-left: 5%;
+}
+
+div.result h2 {
+	margin-left: 10%;
+}
+
+div.result p {
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-down: 5%;
+}
+
+div.result img {
+	float: right;
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+fieldset {
+	display: block;
+	text-align: left;
+	border: 2px outset gray;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+fieldset label {
+	margin: 5%;
+}
+
+input:checked {
+	background-color: #F8FFF6;
+	font-weight: 110%;
+}
+
+h1 {
+	font-family: Courier;
+	font-style: italic;
+}
+
+h2 {
+	font-family: Helvetica;
+}
+
+div.quiz footer {
+	padding-top: 10%;
+	padding-bottom: 3px;
+}
+
+input[type="submit"] {
+	background-color: white;
+	font-size: 120%;
+	font-style: italic;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+legend {
+	align-self: flex-start;
+	background-color: white;
+	border: 2px outset gray;
+	padding: 0.2em;
+}
+
+html {
+	overflow-x: hidden;
+}
